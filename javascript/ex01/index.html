@@ -473,8 +473,8 @@ automaattisesti havainnoida suosituimman koulutuksen (vie hiiri pisimmän palkin
   <h1>Tehtävät</h1>
   <h2>Aloitus:</h2>
   <ol>
-  	<li>Avaa tämä HTML-tiedosto tekstieditorissa (suosituksena on käyttää <a href="http://www.sublimetext.com/" target="_blank">Sublime-tekstieditoria</a>).</li>
-  	<li>Avaa tiedosto <b>Chrome</b>-selaimessa ja etsi sitten merkkijono EX1, niin pääset tälle kohtaa. Lähdekoodi on tiedoston alaosassa.</li>
+    <li>Avaa tämä HTML-tiedosto tekstieditorissa (suosituksena on käyttää <a href="http://www.sublimetext.com/" target="_blank">Sublime-tekstieditoria</a>).</li>
+    <li>Avaa tiedosto <b>Chrome</b>-selaimessa ja etsi sitten merkkijono EX1, niin pääset tälle kohtaa. Lähdekoodi on tiedoston alaosassa.</li>
   </ol>
 
 
@@ -497,8 +497,8 @@ automaattisesti havainnoida suosituimman koulutuksen (vie hiiri pisimmän palkin
   </p>
 
   <p>
-   	<b>EX5.</b> Kokeile Chromen debuggeria. Ota työkalut esiin Ctrl+Shift+I (tai klikkaamalla oikealla painikkeella Inspect element). Klikkaa sitten jotakin palkkia, ja koodin
-   	suoritus pysähtyy komentoon <tt>debugger;</tt>. Mene välilehdelle Console, ja kirjoita <tt>d</tt>, niin näet muuttujan d arvon.
+    <b>EX5.</b> Kokeile Chromen debuggeria. Ota työkalut esiin Ctrl+Shift+I (tai klikkaamalla oikealla painikkeella Inspect element). Klikkaa sitten jotakin palkkia, ja koodin
+    suoritus pysähtyy komentoon <tt>debugger;</tt>. Mene välilehdelle Console, ja kirjoita <tt>d</tt>, niin näet muuttujan d arvon.
   </p>
 
    <p>Jos et osaa loppuja tehtäviä, voit jo nyt palauttaa tehtävän. <b>Palauta tehtävä</b> <a href="http://padlet.com/jshaltuun/3k3tjpg72hgr">tälle Padlet-sivulle</a> tuplaklikkaamalla ja upload (tiedoston voi myös raahata suoraan sivulle). Kirjoita palautuksesi yhteyteen nimesi tai nimimerkkisi.</p>
@@ -686,6 +686,11 @@ ex.chart = function() {
  */
 
 var infovis = ex.chart();
+
+if($("svg.chart").children().length) {
+  $('body').children().remove();
+  $('body').append("<p>Tiedosto on virheellinen. Älä tallenna tiedostoa selaimesta, vaan tallenna liitetiedosto suoraan sähköpostista toiminnolla <b>Save As..</b></p>");
+}
 infovis.init();
 infovis.draw();
 
